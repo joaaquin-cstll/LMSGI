@@ -1,0 +1,14 @@
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none; /* Que no salgan los puntos de la lista*/
+    gap: 10px; /* Separar */
+    a{
+        text-decoration: none;
+        color: blueviolet;
+        font-size: 69px;
+        padding: 25px 10px;
+        background-color: black;
+    }
+
+}

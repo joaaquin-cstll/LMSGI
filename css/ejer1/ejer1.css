@@ -1,0 +1,29 @@
+.cta-container {
+    background-image: url('ejer1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-text {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #626bb2;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-transform: uppercase; /* Poner el texto en mayúsculas */
+}
