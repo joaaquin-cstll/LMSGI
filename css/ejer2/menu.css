@@ -1,21 +1,29 @@
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(119, 68, 2);
+    padding: 10px;
+}
+nav h1 {
+    color: aliceblue;
+    padding-left: 30px;
 }
 .nav-list{
     display: flex;
     flex-direction: row;
     list-style: none; /* Que no salgan los puntos de la lista*/
-    gap: 10px; /* Separar */
+    gap: 5px; /* Separar */
+    padding-right: 30px;
     a{
         text-decoration: none;
-        color: rgb(226, 223, 43);
+        color: rgb(119, 68, 2);
         font-size: 30px;
-        padding: 25px 10px;
-        background-color: rgb(236, 7, 7);
+        padding: 15px 10px;
+        border-radius: 10px;
+        background-color: rgb(236, 182, 7);
     }
 }
-
 .nav-list a:hover{
     background-color: aqua;
 }
