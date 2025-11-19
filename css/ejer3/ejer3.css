@@ -6,10 +6,12 @@ nav {
     background-color: rgb(119, 68, 2);
     padding: 10px;
 }
+
 nav h1 {
     color: aliceblue;
     padding-left: 30px;
 }
+
 .nav-list{
     display: flex;
     flex-direction: row;

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben se pasa a la siguiente línea*/
+    justify-content: center;
+    gap: 32px;
+}
+
+.gallery-item {
+    width: calc(100% / 3 - 32px);
+}
+
+.gallery-image {
+    width: 95%; /* Ancho */
+    height: 95%; /* Alto */
+    border-radius: 8px;
+}
