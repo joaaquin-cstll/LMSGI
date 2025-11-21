@@ -1,9 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(119, 68, 2);
-    padding: 10px;
+    padding: 20px;
 }
 
 nav h1 {
@@ -19,37 +25,60 @@ nav h1 {
     padding-right: 30px;
     a{
         text-decoration: none;
-        color: rgb(119, 68, 2);
+        color: rgb(119, 39, 2);
         font-size: 30px;
         padding: 15px 10px;
         border-radius: 10px;
-        background-color: rgb(236, 182, 7);
+        background-color: rgb(223, 180, 124);
     }
 }
 .nav-list a:hover{
     background-color: aqua;
 }
 
-h2 .section title {
+#menu-section {
+    background-color: rgb(37, 36, 36);
+    color: aliceblue;
+}
+
+#menu-section .section-title {
     text-align: center;
-    padding: 10px;
+    padding: 10px 0 30px;
     font-size: 2rem;
 }
 
-.gallery-list {
+#menu-section .menu-list {
     display: flex;
     flex-wrap: wrap; /* Si no caben se pasa a la siguiente línea*/
-    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 100px;
+}
+
+#menu-section .menu-list .menu-item {
+    display: flex;
     justify-content: center;
-    gap: 32px;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(100% / 3 - 40px);
 }
 
-.gallery-item {
-    width: calc(100% / 3 - 32px);
+#menu-section .menu-list .menu-item .menu-image {
+    max-width: 83%;
+    aspect-ratio: 1;
 }
 
-.gallery-image {
-    width: 95%; /* Ancho */
-    height: 95%; /* Alto */
-    border-radius: 8px;
+#menu-section .menu-list .menu-item p {
+    text-align: center;
+}
+
+.pie-pagina {
+    background-color: rgb(37, 36, 36);
+    color: aliceblue;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between; /* Separa el copyright a la izq y links a la der */
+    align-items: center;
 }
