@@ -1,3 +1,7 @@
+:root {
+    --color1-:rgb(119, 68, 2);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +12,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(119, 68, 2);
+    background-color: var(--color1-);
     padding: 20px;
 }
 
@@ -74,11 +78,19 @@ nav h1 {
     text-align: center;
 }
 
-.pie-pagina {
-    background-color: rgb(37, 36, 36);
-    color: aliceblue;
-    padding: 20px 40px;
+#pie-pagina footer {
     display: flex;
-    justify-content: space-between; /* Separa el copyright a la izq y links a la der */
+    justify-content: space-between; /* Un elemento a cada extremo */
     align-items: center;
+    padding: 20px; /* Espacio interno */
+}
+
+.policy {
+    display: flex;              /* Poner los links uno al lado del otro */
+    gap: 20px;                  /* Espacio entre los links */
+    list-style: none;           /* Quita los puntos de la lista */
+}
+
+.policy a {
+    text-decoration: none;      /* Quitar subrayado */
 }
