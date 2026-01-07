@@ -1,14 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Aquí que guardaran los ejercicios de LMSGI">
-    <meta name="keywords" content="html, css, lmsgi, ejercicios">
-    <meta name="author" content="Joaquín Castillo García">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMSGI</title>
+    <title>Página de Inicio | Mis Ejercicios</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>JOAQUIN</h1>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="html/icon.jpg" alt="Logo" class="nav-icon">
+                <span>Mi Proyecto</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#ejercicios">Ejercicios</a></li>
+                <li><a href="html/ejer1.html">Ver Ejer 1</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Bienvenido a mi Panel de Control</h1>
+                <p>Explora la colección de ejercicios y desarrollos web realizados durante el curso.</p>
+                <a href="#ejercicios" class="btn">Empezar a explorar</a>
+            </div>
+        </section>
+
+        <section id="ejercicios" class="container grid-ejercicios">
+            <div class="card">
+                <h3>Ejercicio 1</h3>
+                <p>Introducción a etiquetas HTML básicas.</p>
+                <a href="html/ejer1.html">Ver detalle</a>
+            </div>
+            <div class="card">
+                <h3>Ejercicio 2</h3>
+                <p>Uso de selectores y estilos iniciales.</p>
+                <a href="html/ejer2.html">Ver detalle</a>
+            </div>
+            <div class="card">
+                <h3>Ejercicio 6</h3>
+                <p>Layout avanzado con Flexbox y Grid.</p>
+                <a href="html/ejer6.html">Ver detalle</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Joaquín Castillo García</p>
+    </footer>
+
 </body>
 </html>
