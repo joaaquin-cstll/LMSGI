@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #343a40;
+}
+
+nav {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6em;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #343a40;
+  padding: 25px 10px;
+}
+
+nav ul li:nth-child(1) a { border-bottom: 3px solid #007bff; }
+nav ul li:nth-child(2) a { border-bottom: 3px solid #32cd32; }
+nav ul li:nth-child(3) a { border-bottom: 3px solid #8a2be2; }
+nav ul li:nth-child(4) a { border-bottom: 3px solid #ffd747; }
+
+nav ul li a:hover {
+  border-bottom: 3px solid #007bff;
+  font-weight: bold;
+}
+
+.cta-container {
+  background-color: #e9ecef;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  text-align: center;
+}
+
+.cta-container h1 {
+  font-size: 2.2em;
+}
+
+.cta-container p {
+  max-width: 550px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.services-container {
+  background-color: #f1f3f5;
+  padding: 34px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre columnas */
+}
+
+.services-container > div {
+  width: 30%; /* Cada columna 30% */
+  text-align: center;
+}
+
+.services-container div div {
+  font-size: 2em; /* Tamaño icono */
+}
+
+.contact-container {
+  background-color: #f8f9fa;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  background-color: #f1f3f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+input[name="name"] { border-bottom: 3px solid #32cd32; }
+input[name="email"] { border-bottom: 3px solid #8a2be2; }
+textarea [name="message"]{ border-bottom: 3px solid #4791ff; }
+
+.contact-form input:hover, 
+.contact-form textarea:hover {
+  border-bottom: 3px solid #007bff;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #343a40;
+}
+
+footer {
+  background-color: #f1f3f5;
+  padding: 20px;
+  text-align: center;
+}
+
+footer h3, footer small {
+  font-weight: bold;
+}
+
+.animated-elephant {
+  font-size: 2em;
+  text-decoration: none;
+  display: inline-block;
+}
+
