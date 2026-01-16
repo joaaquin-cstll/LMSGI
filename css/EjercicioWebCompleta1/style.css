@@ -9,6 +9,7 @@ body {
   color: #343a40;
 }
 
+/* Cabecera */
 nav {
   background-color: #f8f9fa;
   padding: 10px 20px;
@@ -45,6 +46,7 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
+/* Body */
 .cta-container {
   background-color: #e9ecef;
   padding-top: 110px;
@@ -63,6 +65,7 @@ nav ul li a:hover {
   font-size: 1.2em;
 }
 
+/* Servicios */
 .services-container {
   background-color: #f1f3f5;
   padding: 34px 0;
@@ -80,6 +83,7 @@ nav ul li a:hover {
   font-size: 2em; /* Tamaño icono */
 }
 
+/* Formulario */
 .contact-container {
   background-color: #f8f9fa;
   padding: 40px;
@@ -107,7 +111,7 @@ nav ul li a:hover {
 
 input[name="name"] { border-bottom: 3px solid #32cd32; }
 input[name="email"] { border-bottom: 3px solid #8a2be2; }
-textarea [name="message"]{ border-bottom: 3px solid #4791ff; }
+textarea[name="message"]{ border-bottom: 3px solid #ffdd47; }
 
 .contact-form input:hover, 
 .contact-form textarea:hover {
@@ -128,6 +132,7 @@ textarea [name="message"]{ border-bottom: 3px solid #4791ff; }
   background-color: #343a40;
 }
 
+/* Piede página */
 footer {
   background-color: #f1f3f5;
   padding: 20px;
