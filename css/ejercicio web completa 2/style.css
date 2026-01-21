@@ -1,0 +1,143 @@
+/* Montserrat Light 300 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --primary-blue: #074167; /* Azul */
+    --dark-blue: #143548; /* Azul oscuro */
+    --background-light: #ffebd9; /* Crema */
+    --hover-light: #CCB299; /* Marrón */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: var(--background-light);
+    color: var(--dark-blue);
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    transition: color 0.3s ease;
+}
+
+/* Pointer en elementos que se clican */
+a, button, input[type="button"], input[type="submit"], .logo img {
+    cursor: pointer;
+}
+
+/* Enlaces del Menú y Footer */
+nav ul li a:hover,
+footer a:hover {
+    color: var(--hover-light);
+}
+
+.logo img {
+    transition: transform 0.25s ease;
+}
+
+.logo img:hover {
+    transform: rotate(300deg);
+}
+
+.search input {
+    padding: 8px;
+    border: 1px solid var(--primary-blue);
+    border-radius: 4px;
+    outline: none;
+    transition: transform 0.25s ease;
+}
+
+.search input:hover {
+    transform: scale(1.1);
+}
+
+/* Botón Lupa */
+.search button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Botón Lupa Hover: Escala 1.3 y cambio de color */
+.search button:first-of-type:hover {
+    transform: scale(1.3);
+    color: var(--hover-light);
+}
+
+/* 7. Parallax y Filtro en cta-container */
+.cta-container {
+    height: 400px; /* Altura necesaria para ver el efecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Imagen de fondo (usando una imagen de gatos de ejemplo) */
+    background-image: url(gato\ fondo.jpg);
+    
+    /* Efecto Parallax */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: sepia(30%);
+}
+
+/* Sombras H1 */
+h1 {
+    color: white;
+    font-size: 4rem;
+    text-shadow: 8px 4px 6px var(--hover-light);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-menu div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    color: var(--background-light);
+}
+
+footer a {
+    color: white;
+    margin-bottom: 5px;
+}
+
