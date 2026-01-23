@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 :root {
-    --primary-blue: #074167; /* Azul */
-    --dark-blue: #143548; /* Azul oscuro */
-    --background-light: #ffebd9; /* Crema */
-    --hover-light: #CCB299; /* Marrón */
+    --primary-blue: #074167;
+    --dark-blue: #143548;
+    --background-light: #ffebd9;
+    --hover-light: #CCB299;
 }
 
 * {
@@ -21,13 +21,13 @@ body {
     color: var(--dark-blue);
 }
 
+/* --- HEADER --- */
 header {
-    background-color: #fff;
-    padding: 1rem;
+    background-color: var(--dark-blue);
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .menu {
@@ -36,9 +36,10 @@ header {
     gap: 20px;
 }
 
+/* Enlaces generales */
 a {
     text-decoration: none;
-    color: var(--primary-blue);
+    color: white;
     transition: color 0.3s ease;
 }
 
@@ -47,7 +48,7 @@ a, button, input[type="button"], input[type="submit"], .logo img {
     cursor: pointer;
 }
 
-/* Enlaces del Menú y Footer */
+/* Hover de enlaces */
 nav ul li a:hover,
 footer a:hover {
     color: var(--hover-light);
@@ -55,22 +56,37 @@ footer a:hover {
 
 .logo img {
     transition: transform 0.25s ease;
+    display: block; /* Sin espacio extra abajo */
 }
 
 .logo img:hover {
     transform: rotate(300deg);
 }
 
+/* --- BARRA DE BÚSQUEDA --- */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .search input {
-    padding: 8px;
-    border: 1px solid var(--primary-blue);
-    border-radius: 4px;
+    padding: 8px 15px;
+    border: none;
+    background-color: var(--background-light);
+    color: var(--dark-blue);
+    border-radius: 20px;
     outline: none;
     transition: transform 0.25s ease;
 }
 
+.search input::placeholder {
+    color: var(--primary-blue);
+    opacity: 0.7;
+}
+
 .search input:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Botón Lupa */
@@ -78,66 +94,97 @@ footer a:hover {
     background: none;
     border: none;
     font-size: 1.2rem;
+    color: white;
     transition: transform 0.25s ease, color 0.25s ease;
 }
 
-/* Botón Lupa Hover: Escala 1.3 y cambio de color */
-.search button:first-of-type:hover {
+.search button:hover {
     transform: scale(1.3);
     color: var(--hover-light);
 }
 
-/* 7. Parallax y Filtro en cta-container */
+/* --- HERO SECTION (IMAGEN CENTRAL) --- */
 .cta-container {
-    height: 400px; /* Altura necesaria para ver el efecto */
+    height: 500px; /* Un poco más alto para lucir la imagen */
     display: flex;
     justify-content: center;
     align-items: center;
     
-    /* Imagen de fondo (usando una imagen de gatos de ejemplo) */
-    background-image: url(gato\ fondo.jpg);
+    /* Asegúrate de que la ruta de la imagen sea correcta en tu carpeta */
+    background-image: url('gato fondo.jpg'); 
     
-    /* Efecto Parallax */
     background-attachment: fixed;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
-    filter: sepia(30%);
+    /* Quitamos el filtro sepia o lo bajamos para que se parezca más a la foto original */
+    filter: none; 
 }
 
-/* Sombras H1 */
+/* Título H1 */
 h1 {
-    color: white;
-    font-size: 4rem;
-    text-shadow: 8px 4px 6px var(--hover-light);
+    color: var(--dark-blue); /* CAMBIO: El texto en la imagen se ve oscuro */
+    font-size: 5rem;
+    font-weight: 300;
+    /* Ajuste para que se lea mejor sobre la imagen */
+    text-shadow: none; 
 }
 
-/* Footer */
+/* --- FOOTER --- */
 footer {
-    background-color: var(--dark-blue);
-    color: white;
-    padding: 40px;
+    /* CAMBIO ESTRUCTURAL: Flex column para apilar las dos franjas */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    padding: 0;
+    color: white;
 }
 
-.footer-menu {
+/* Franja superior del footer (ONLY CATS) */
+.footer-copy {
+    background-color: var(--primary-blue); /* La franja azul media */
+    padding: 30px;
+    text-align: center;
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-copy h3 {
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* Franja inferior del footer */
+.footer-menu {
+    background-color: var(--dark-blue);
+    padding: 50px 10%; /* Padding para centrar el contenido */
+    display: flex;
+    justify-content: space-between; /* Separar las columnas */
+    gap: 20px;
 }
 
 .footer-menu div {
     display: flex;
     flex-direction: column;
+    min-width: 100px;
 }
 
-footer h3 {
-    margin-bottom: 10px;
+.footer-menu h3 {
+    margin-bottom: 20px;
     color: var(--background-light);
+    font-size: 1.2rem;
 }
 
-footer a {
+.footer-menu a {
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
+.footer-menu a:hover {
+    opacity: 1;
+    color: var(--hover-light);
+}
