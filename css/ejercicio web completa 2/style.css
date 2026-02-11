@@ -36,6 +36,16 @@ header {
     gap: 20px;
 }
 
+nav button {
+  display: none;
+  font-size: 30px;
+  background-color: var(--hover-light);
+  border: none;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 /* Enlaces generales */
 a {
     text-decoration: none;
@@ -103,45 +113,37 @@ footer a:hover {
     color: var(--hover-light);
 }
 
-/* --- HERO SECTION (IMAGEN CENTRAL) --- */
+/* IMAGEN CENTRAL */
 .cta-container {
-    height: 500px; /* Un poco más alto para lucir la imagen */
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Asegúrate de que la ruta de la imagen sea correcta en tu carpeta */
     background-image: url('gato fondo.jpg'); 
-    
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    /* Quitamos el filtro sepia o lo bajamos para que se parezca más a la foto original */
-    filter: none; 
 }
 
-/* Título H1 */
+/* Título */
 h1 {
-    color: var(--dark-blue); /* CAMBIO: El texto en la imagen se ve oscuro */
+    color: var(--dark-blue);
     font-size: 5rem;
     font-weight: 300;
-    /* Ajuste para que se lea mejor sobre la imagen */
-    text-shadow: none; 
+    text-shadow: none; /* para que el texto se lea mejor sobre la imagen */
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 footer {
-    /* CAMBIO ESTRUCTURAL: Flex column para apilar las dos franjas */
     display: flex;
     flex-direction: column;
     padding: 0;
     color: white;
 }
 
-/* Franja superior del footer (ONLY CATS) */
+/* Franja superior*/
 .footer-copy {
-    background-color: var(--primary-blue); /* La franja azul media */
+    background-color: var(--primary-blue);
     padding: 30px;
     text-align: center;
     display: flex;
@@ -156,10 +158,10 @@ footer {
     color: white;
 }
 
-/* Franja inferior del footer */
+/* Franja inferior*/
 .footer-menu {
     background-color: var(--dark-blue);
-    padding: 50px 10%; /* Padding para centrar el contenido */
+    padding: 50px; /* para centrar el contenido */
     display: flex;
     justify-content: space-between; /* Separar las columnas */
     gap: 20px;
@@ -181,10 +183,18 @@ footer {
     color: white;
     margin-bottom: 8px;
     font-size: 0.9rem;
-    opacity: 0.8;
 }
 
-.footer-menu a:hover {
-    opacity: 1;
-    color: var(--hover-light);
+@media (max-width: 800px){
+    .footer-menu{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .menu{
+        display: none;
+    }
+    nav button {
+    display: block;
+  }
 }
