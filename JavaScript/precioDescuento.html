@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Precio:</label>
+    <input type="text" id="precio">
+    <label>Descuento:</label>
+    <input type="text" id="porcentaje">
+    <button onclick="descuento()">Calcular</button>
+    <p id="respuesta"></p>
+    <script>
+        function descuento(){
+            const entrada=document.getElementById("precio");
+            const salida=document.getElementById("porcentaje");
+            const respuesta=document.getElementById("respuesta");
+            let precioArt=precio.value;
+            let descuentoArt=porcentaje.value;
+            let precioDesc=precioArt-(precioArt*descuentoArt/100);
+            respuesta.textContent=precioDesc;
+        }
+    </script>
+</body>
+</html>
