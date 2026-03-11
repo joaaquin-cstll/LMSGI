@@ -1,9 +1,10 @@
 const btnAgregar = document.getElementById('agregar');
 const lista = document.getElementById('lista');
+const entrada = document.getElementById('tareaInput');
 
 btnAgregar.addEventListener('click', function agregar(){
-    const pTarea = document.createElement('p');
-    const node1 = document.createTextNode('- '+entrada.value);
-    pTarea.appendChild(node1);
-    lista.appendChild(pTarea);
+    const nuevaTarea = document.createElement('li');
+    nuevaTarea.textContent = entrada.value;
+    lista.appendChild(nuevaTarea);
+    entrada.value = "";
 });
